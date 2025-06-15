@@ -1,5 +1,15 @@
 name: test seconf flow
-on: push
+#on: [push, workflow_dispatch]
+on:
+   pull_request:
+      type:
+         - opened
+   workflow_dispatch:
+   push:
+      branches:
+         - main
+         - dev-*
+         - 'sudheer/feature/*'
 jobs:
    test:
      runs-on: ubuntu-latest

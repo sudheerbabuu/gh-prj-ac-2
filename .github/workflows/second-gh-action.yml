@@ -1,0 +1,9 @@
+name: test seconf flow
+on: push
+jobs:
+   test:
+     runs-on: ubuntu-latest
+     steps:
+      - name: this is my seconf workflow
+        run:  echo "This is my second workflow"
+        

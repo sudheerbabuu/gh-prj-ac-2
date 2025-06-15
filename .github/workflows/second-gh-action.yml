@@ -5,5 +5,14 @@ jobs:
      runs-on: ubuntu-latest
      steps:
       - name: this is my seconf workflow
-        run:  echo "This is my second workflow"
-        
+        #run:  echo "This is my second workflow"
+        uses: actions/checkout@v4.2.2
+      - name: install nodejs
+        uses: actions/setup-node@v3
+        with:
+           ndoe-version: 18
+      - name: install dependencies
+        run: npm install / npm ci
+      - name: run tests
+        run: npm test
+      
